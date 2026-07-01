@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Ajaykumar K — AI & ML Engineer</title>
+<meta name="description" content="Ajaykumar K — First-year B.E. AI &amp; ML student at K.S. Rangasamy College of Technology. Building intelligent systems including CNN crop disease detectors and real-time voice agents. Explore my projects, skills, and certifications."/>
+<title>Ajaykumar K — AI &amp; ML Engineer</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap');
 
@@ -508,6 +509,23 @@ footer{
   .stats-grid{grid-template-columns:1fr 1fr;}
   footer{flex-direction:column;gap:12px;text-align:center;padding:24px;}
 }
+/* ── SMALL MOBILE (<480px) ── */
+@media(max-width:480px){
+  #hero{padding:90px 16px 40px;gap:24px;}
+  .hero-name{font-size:clamp(36px,10vw,52px);}
+  .hero-sub{font-size:15px;max-width:100%;}
+  .hero-cta{justify-content:center;}
+  .btn-primary,.btn-outline{padding:12px 20px;font-size:11px;}
+  .avatar-wrap{width:200px;height:200px;}
+  .avatar-circle{width:130px;height:130px;}
+  .avatar-initials{font-size:40px;}
+  .ripple:nth-child(1){width:200px;height:200px;}
+  .ripple:nth-child(2){width:250px;height:250px;}
+  .ripple:nth-child(3){width:300px;height:300px;}
+  .card-3d-wrap{position:static;margin-top:16px;animation:none;}
+  .card-3d{width:100%;}
+  .hero-right{flex-direction:column;align-items:center;overflow:visible;}
+}
 </style>
 </head>
 <body>
@@ -544,7 +562,7 @@ footer{
     <h1 class="hero-name">Ajay<br>kumar K</h1>
     <p class="hero-sub">Building intelligent systems — from CNN-based crop disease classifiers to real-time voice agents. First-year B.E. student with a 8.71 CGPA and a passion for AI that actually works.</p>
     <div class="hero-cta">
-      <a href="#" class="btn-primary" onclick="openResume();return false;">See My Resume</a>
+      <a href="Ajaykumar_k_resume.pdf" class="btn-primary" onclick="openResume();return false;">See My Resume</a>
       <a href="#contact" class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Get in Touch</a>
     </div>
   </div>
@@ -612,9 +630,9 @@ footer{
     </div>
     <div class="stats-grid reveal slide-right">
       <div class="stat-card"><div class="stat-val">8.71</div><div class="stat-label">CGPA</div></div>
-      <div class="stat-card"><div class="stat-val">2+</div><div class="stat-label">Projects</div></div>
+      <div class="stat-card"><div class="stat-val">2</div><div class="stat-label">Projects</div></div>
       <div class="stat-card"><div class="stat-val">5</div><div class="stat-label">Certifications</div></div>
-      <div class="stat-card"><div class="stat-val">3</div><div class="stat-label">Research Papers</div></div>
+      <div class="stat-card"><div class="stat-val">2</div><div class="stat-label">Research Papers</div></div>
     </div>
   </div>
 </section>
@@ -688,6 +706,10 @@ footer{
         <span class="tag">CNN</span>
         <span class="tag">Python</span>
       </div>
+      <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="YOUR_GITHUB_REPO_LINK_HERE" target="_blank" class="btn-outline" style="font-size:10px;padding:8px 18px;">View Code</a>
+        <a href="YOUR_COLAB_OR_DEMO_LINK_HERE" target="_blank" class="btn-outline" style="font-size:10px;padding:8px 18px;">Live Demo</a>
+      </div>
     </div>
     <div class="project-card reveal slide-right">
       <div class="project-num">02 // 2026</div>
@@ -698,6 +720,10 @@ footer{
         <span class="tag">NLP</span>
         <span class="tag">Python</span>
         <span class="tag">Mobile</span>
+      </div>
+      <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="YOUR_GITHUB_REPO_LINK_HERE" target="_blank" class="btn-outline" style="font-size:10px;padding:8px 18px;">View Code</a>
+        <a href="YOUR_DEMO_LINK_HERE" target="_blank" class="btn-outline" style="font-size:10px;padding:8px 18px;">Live Demo</a>
       </div>
     </div>
   </div>
@@ -746,7 +772,7 @@ footer{
       <div style="display:flex;gap:20px;justify-content:center;margin-top:32px;flex-wrap:wrap;">
         <a href="https://www.linkedin.com/in/ajaykumar1402/" target="_blank" class="btn-outline" style="font-size:11px;padding:12px 24px;">LinkedIn</a>
         <a href="https://github.com/Ajaykumar1402-Ai" target="_blank" class="btn-outline" style="font-size:11px;padding:12px 24px;">GitHub</a>
-        <a href="#" class="btn-outline" style="font-size:11px;padding:12px 24px;">Portfolio</a>
+        <a href="https://ajaykumar1402-ai.github.io/portfolio-/" target="_blank" class="btn-outline" style="font-size:11px;padding:12px 24px;">Portfolio</a>
       </div>
     </div>
   </div>
@@ -896,7 +922,7 @@ bars.forEach(b => barObs.observe(b));
   <div style="display:flex;align-items:center;justify-content:space-between;width:min(820px,95vw);padding:0 4px;">
     <span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;">Resume — Ajaykumar K</span>
     <div style="display:flex;gap:12px;align-items:center;">
-      <a id="resume-download" href="#" download="Ajaykumar_K_Resume.pdf" style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--accent);text-decoration:none;border:1px solid var(--border);padding:8px 18px;text-transform:uppercase;transition:all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">Download</a>
+      <a id="resume-download" href="Ajaykumar_k_resume.pdf" download="Ajaykumar_K_Resume.pdf" style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--accent);text-decoration:none;border:1px solid var(--border);padding:8px 18px;text-transform:uppercase;transition:all 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">Download</a>
       <button onclick="closeResume()" style="background:none;border:1px solid var(--border);color:var(--text2);width:36px;height:36px;font-size:18px;cursor:none;transition:all 0.3s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'">&#x2715;</button>
     </div>
   </div>
