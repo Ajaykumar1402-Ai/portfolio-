@@ -185,12 +185,22 @@ function App() {
                 <span className="text-gradient-primary">Ajaykumar K</span>
               </h1>
 
-              {/* Description */}
-              <p className="text-base md:text-lg leading-[1.9] max-w-lg font-light">
-                <span className="block text-textPrimary font-medium">Not here to just write code — here to solve problems.</span>
-                <span className="block text-textSecondary">The kind that keep people up at night,</span>
-                <span className="block text-textSecondary">turned into solutions that make mornings a little better.</span>
-              </p>
+              {/* Quote Block */}
+              <div className="flex flex-col gap-3 max-w-lg border-l-2 border-accent/30 pl-5 py-1">
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm md:text-base text-textPrimary/90 italic leading-relaxed font-light">
+                    "Dream is not that which you see while sleeping — it is something that does not let you sleep."
+                  </p>
+                  <span className="font-space text-[9px] tracking-widest text-accent/60 uppercase">— Dr. APJ Abdul Kalam</span>
+                </div>
+
+                <p className="text-sm text-textSecondary leading-relaxed font-light">
+                  That restlessness lives in every project built and every problem chased.
+                </p>
+                <p className="text-sm text-textSecondary leading-relaxed font-light">
+                  Dreams don't wait for morning — neither does the work.
+                </p>
+              </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4 mt-2">
