@@ -186,9 +186,10 @@ function App() {
               </h1>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-textSecondary leading-relaxed max-w-lg font-light">
-                I turn ideas into intelligent solutions — the kind that make people's lives a little easier.
-                A passionate builder with a <span className="text-accent font-medium">8.71 CGPA</span>, always chasing the next problem worth solving.
+              <p className="text-base md:text-lg leading-[1.9] max-w-lg font-light">
+                <span className="block text-textPrimary font-medium">Not here to just write code — here to solve problems.</span>
+                <span className="block text-textSecondary">The kind that keep people up at night,</span>
+                <span className="block text-textSecondary">turned into solutions that make mornings a little better.</span>
               </p>
 
               {/* CTA Buttons */}
