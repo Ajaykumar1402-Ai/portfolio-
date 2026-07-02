@@ -190,16 +190,10 @@ function App() {
                   display: 'inline-block',
                   paddingBottom: '0.3em',
                   lineHeight: '1',
-                }}>Ajay</span><span style={{
-                  background: 'linear-gradient(135deg, #38bdf8 0%, #a78bfa 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  display: 'inline-block',
-                  paddingBottom: '0.3em',
-                  lineHeight: '1',
-                }}>kumar K</span>
+                }}>A<em style={{fontStyle:'italic', WebkitTextFillColor:'transparent'}}>j</em>aykumar K</span>
               </h1>
+
+
 
 
               {/* Quote Block */}
