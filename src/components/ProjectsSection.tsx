@@ -20,7 +20,7 @@ const projects: Project[] = [
     tags: ["TensorFlow", "OpenCV", "CNN", "Python"],
     codeLink: "https://github.com/Ajaykumar1402-Ai",
     demoLink: "#",
-    image: "./proj_smart_farming.png",
+    image: `${import.meta.env.BASE_URL}proj_smart_farming.png`,
     accent: "#a78bfa",
   },
   {
@@ -30,7 +30,7 @@ const projects: Project[] = [
     tags: ["LiveKit", "NLP", "Python", "Mobile"],
     codeLink: "https://github.com/Ajaykumar1402-Ai",
     demoLink: "#",
-    image: "./proj_voice_assistant.png",
+    image: `${import.meta.env.BASE_URL}proj_voice_assistant.png`,
     accent: "#38bdf8",
   },
   {
@@ -40,7 +40,7 @@ const projects: Project[] = [
     tags: ["Python", "PyTorch", "CNN", "FastAPI", "React"],
     codeLink: "https://github.com/Ajaykumar1402-Ai/Multimodal-TB-Detection-System",
     demoLink: "https://multimodal-tb-detection-system.vercel.app/",
-    image: "./proj_tb_vision.png",
+    image: `${import.meta.env.BASE_URL}proj_tb_vision.png`,
     accent: "#f472b6",
   },
 ];
@@ -96,7 +96,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           animate={{ scale: hovered ? 1.15 : 1.08 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/50 to-background/20" />
         <div
           className="absolute inset-0 transition-opacity duration-700"
           style={{ background: `radial-gradient(ellipse at 80% 50%, ${project.accent}10 0%, transparent 70%)`, opacity: hovered ? 1 : 0 }}
@@ -112,7 +112,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 scale-105 group-hover:scale-100"
+              className="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-100"
             />
             {/* Color overlay */}
             <div

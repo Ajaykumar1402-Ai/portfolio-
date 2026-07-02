@@ -181,8 +181,8 @@ function App() {
               </div>
 
               {/* Main Heading */}
-              <h1 className="font-extrabold leading-none pb-2 tracking-[0.04em] font-syne whitespace-nowrap text-[clamp(2.4rem,6.5vw,5.5rem)]">
-                <span className="text-gradient-primary">Ajaykumar K</span>
+              <h1 className="font-extrabold leading-none font-syne whitespace-nowrap text-[clamp(2.4rem,6.5vw,5.5rem)]">
+                <span className="text-gradient-primary inline-block pb-[0.18em]">Ajaykumar K</span>
               </h1>
 
               {/* Quote Block */}
