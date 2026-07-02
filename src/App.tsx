@@ -94,7 +94,7 @@ function App() {
                 </a>
               ))}
               <a
-                href="/Ajaykumar_k_resume.pdf"
+                href="./Ajaykumar_k_resume.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="ml-4 px-5 py-2.5 bg-accent/10 border border-accent/30 hover:bg-accent hover:text-background text-accent font-space text-[10px] tracking-widest uppercase transition-all duration-300 clip-corner-both"
@@ -136,7 +136,7 @@ function App() {
                   </a>
                 ))}
                 <a
-                  href="/Ajaykumar_k_resume.pdf"
+                  href="./Ajaykumar_k_resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="mt-2 px-5 py-3 text-center bg-accent/10 border border-accent/30 text-accent font-space text-[10px] tracking-widest uppercase"
@@ -205,7 +205,7 @@ function App() {
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4 mt-2">
                 <motion.a
-                  href="/Ajaykumar_k_resume.pdf"
+                  href="./Ajaykumar_k_resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="group relative px-8 py-4 overflow-hidden"

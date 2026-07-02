@@ -20,7 +20,7 @@ const projects: Project[] = [
     tags: ["TensorFlow", "OpenCV", "CNN", "Python"],
     codeLink: "https://github.com/Ajaykumar1402-Ai",
     demoLink: "#",
-    image: "/proj_smart_farming.png",
+    image: "./proj_smart_farming.png",
     accent: "#a78bfa",
   },
   {
@@ -30,7 +30,7 @@ const projects: Project[] = [
     tags: ["LiveKit", "NLP", "Python", "Mobile"],
     codeLink: "https://github.com/Ajaykumar1402-Ai",
     demoLink: "#",
-    image: "/proj_voice_assistant.png",
+    image: "./proj_voice_assistant.png",
     accent: "#38bdf8",
   },
   {
@@ -40,7 +40,7 @@ const projects: Project[] = [
     tags: ["Python", "PyTorch", "CNN", "FastAPI", "React"],
     codeLink: "https://github.com/Ajaykumar1402-Ai/Multimodal-TB-Detection-System",
     demoLink: "https://multimodal-tb-detection-system.vercel.app/",
-    image: "/proj_tb_vision.png",
+    image: "./proj_tb_vision.png",
     accent: "#f472b6",
   },
 ];
