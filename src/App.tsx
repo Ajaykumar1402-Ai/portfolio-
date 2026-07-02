@@ -181,17 +181,18 @@ function App() {
               </div>
 
               {/* Main Heading */}
-              <h1 className="font-extrabold leading-none font-syne whitespace-nowrap text-[clamp(2.4rem,6.5vw,5.5rem)] tracking-wide">
+              <h1 className="font-extrabold leading-none font-syne whitespace-nowrap text-[clamp(2rem,5.5vw,4.8rem)] tracking-widest uppercase">
                 <span style={{
                   background: 'linear-gradient(135deg, #f1f0ff 0%, #a78bfa 60%, #38bdf8 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
                   display: 'inline-block',
-                  paddingBottom: '0.3em',
+                  paddingBottom: '0.1em',
                   lineHeight: '1',
-                }}>A<em style={{fontStyle:'italic', WebkitTextFillColor:'transparent'}}>j</em>aykumar K</span>
+                }}>Ajaykumar K</span>
               </h1>
+
 
 
 
