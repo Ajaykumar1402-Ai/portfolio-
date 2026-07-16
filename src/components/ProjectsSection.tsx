@@ -15,18 +15,18 @@ interface Project {
 const projects: Project[] = [
   {
     num: "01",
-    title: "Smart Farming — AI Crop Disease Detection",
-    desc: "CNN-based classifier using TensorFlow and OpenCV. Analyzes crop images in real time, detects disease cause, and suggests remedies — optimized for rural low-connectivity environments. Presented as a research paper at Sri Eshwar College of Technology.",
-    tags: ["TensorFlow", "OpenCV", "CNN", "Python"],
+    title: "Collabent — AI-Powered Collaboration Platform",
+    desc: "Collabent is an AI-powered collaboration platform that connects innovators, developers, designers, and entrepreneurs to transform ideas into real-world projects. The platform uses intelligent matching to help users discover teammates, manage project collaboration, and build startups efficiently.",
+    tags: ["React", "Node.js", "AI Matching", "Python"],
     codeLink: "https://github.com/Ajaykumar1402-Ai",
     demoLink: "#",
-    image: `${import.meta.env.BASE_URL}proj_smart_farming.png`,
+    image: `${import.meta.env.BASE_URL}proj_collabent.png`,
     accent: "#a78bfa",
   },
   {
     num: "02",
-    title: "Voice Assistant — Real-Time Mobile Voice Agent",
-    desc: "A voice assistant deployed on mobile via LiveKit for real-time, low-latency voice streaming. Integrates NLP modules for intent recognition, enabling context-aware responses across multiple use cases.",
+    title: "Veera — Real-Time AI Voice Assistant",
+    desc: "Veera is an AI-powered voice assistant deployed on mobile via LiveKit for real-time, low-latency voice streaming. Integrates NLP modules for intent recognition, enabling context-aware responses across multiple use cases.",
     tags: ["LiveKit", "NLP", "Python", "Mobile"],
     codeLink: "https://github.com/Ajaykumar1402-Ai",
     demoLink: "#",
@@ -235,7 +235,7 @@ export const ProjectsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Real-world AI systems designed to solve actual problems — from agriculture to healthcare.
+          Real-world AI systems designed to solve actual problems — from collaboration to healthcare.
         </motion.p>
 
         {/* Project cards */}

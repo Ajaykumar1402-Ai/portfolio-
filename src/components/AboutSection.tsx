@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 
 const stats = [
-  { label: "CGPA", value: "8.71", icon: "🎓", desc: "B.E. CSE (AI&ML)" },
+  { label: "CGPA", value: "8.69", icon: "🎓", desc: "B.E. CSE (AI&ML)" },
   { label: "Projects", value: "3+", icon: "⚡", desc: "Live & Research" },
   { label: "Certifications", value: "5+", icon: "🏆", desc: "Industry Leaders" },
   { label: "Research Papers", value: "2", icon: "📄", desc: "Presented at Conferences" },
@@ -54,7 +54,7 @@ export const AboutSection = () => {
 
           <motion.div className="flex flex-col gap-5" variants={containerVariants}>
             {[
-              "I'm a B.E. student specializing in AI & ML at K.S. Rangasamy College of Technology, Namakkal. I build systems that think — from detecting crop diseases in real time to voice agents that understand and respond naturally.",
+              "I'm a B.E. student specializing in AI & ML at K.S. Rangasamy College of Technology, Namakkal. I build systems that think — from AI-powered collaboration platforms like Collabent to intelligent voice assistants like Veera that understand and respond naturally.",
               "My stack spans Python, TensorFlow, OpenCV, NLP, and vector databases like ChromaDB and Pinecone. I've presented research at VIT Vellore, Sri Eshwar, and Coimbatore Institute of Technology.",
               "I'm driven by one question: how can AI solve problems that actually matter in the real world?",
             ].map((text, i) => (
@@ -137,7 +137,7 @@ export const AboutSection = () => {
               <div className="font-space text-[9px] tracking-widest text-textMuted uppercase mt-0.5">Namakkal · B.E. CSE (AI & ML) · 2025–2029</div>
             </div>
             <div className="absolute right-6 top-1/2 -translate-y-1/2 font-space text-[9px] tracking-widest text-accent uppercase opacity-60">
-              8.71 CGPA
+              8.69 CGPA
             </div>
           </motion.div>
         </motion.div>

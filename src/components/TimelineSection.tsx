@@ -7,7 +7,7 @@ const timelineData = [
     title: "B.E. in Computer Science & Engineering (AI & ML)",
     date: "2025 – 2029",
     location: "K.S. Rangasamy College of Technology, Namakkal",
-    details: "CGPA: 8.71 / 10",
+    details: "CGPA: 8.69 / 10",
     icon: "🎓",
     accent: "#a78bfa",
   },

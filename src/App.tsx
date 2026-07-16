@@ -246,7 +246,7 @@ function App() {
               {/* Quick Stats */}
               <div className="flex gap-8 pt-4 border-t border-border mt-2">
                 {[
-                  { num: '8.71', label: 'CGPA' },
+                  { num: '8.69', label: 'CGPA' },
                   { num: '3+', label: 'Projects' },
                   { num: '5+', label: 'Certifications' },
                   { num: '2', label: 'Research Papers' },
@@ -308,7 +308,7 @@ function App() {
                 {/* CGPA card */}
                 <div className="absolute -bottom-4 -right-4 md:-right-8 bg-surface2/90 border border-border p-4 clip-corner-both z-20">
                   <div className="font-space text-[8px] tracking-widest text-accent uppercase mb-1">Academic Score</div>
-                  <div className="text-2xl font-extrabold text-gradient-cool font-syne">8.71</div>
+                  <div className="text-2xl font-extrabold text-gradient-cool font-syne">8.69</div>
                   <div className="font-space text-[9px] text-textMuted mt-0.5">CGPA · B.E. CSE (AI&ML)</div>
                 </div>
 
