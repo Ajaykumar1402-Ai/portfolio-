@@ -1,11 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring, AnimatePresence } from 'framer-motion';
 
+const isTouchDevice = () => {
+  if (typeof window === 'undefined') return true;
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+};
+
+const prefersReducedMotion = () => {
+  if (typeof window === 'undefined') return false;
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+};
+
 export const Cursor: React.FC = () => {
+  const [isTouch, setIsTouch] = useState(true); // default true to avoid flash
   const [isHovered, setIsHovered] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
   const [isHidden, setIsHidden] = useState(true);
   const [hoverLabel, setHoverLabel] = useState('');
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   // ── Raw mouse position ──
   const cursorX = useMotionValue(-200);
@@ -19,30 +31,28 @@ export const Cursor: React.FC = () => {
   const ringX = useSpring(cursorX, { stiffness: 380, damping: 26, mass: 0.3 });
   const ringY = useSpring(cursorY, { stiffness: 380, damping: 26, mass: 0.3 });
 
-  // ── Trail — 6 comet particles, each progressively slower ──
+  // ── Trail — 3 comet particles (reduced from 6 for better performance) ──
   const t1x = useSpring(cursorX, { stiffness: 280, damping: 30, mass: 0.25 });
   const t1y = useSpring(cursorY, { stiffness: 280, damping: 30, mass: 0.25 });
-  const t2x = useSpring(cursorX, { stiffness: 240, damping: 31, mass: 0.30 });
-  const t2y = useSpring(cursorY, { stiffness: 240, damping: 31, mass: 0.30 });
-  const t3x = useSpring(cursorX, { stiffness: 200, damping: 32, mass: 0.35 });
-  const t3y = useSpring(cursorY, { stiffness: 200, damping: 32, mass: 0.35 });
-  const t4x = useSpring(cursorX, { stiffness: 160, damping: 33, mass: 0.40 });
-  const t4y = useSpring(cursorY, { stiffness: 160, damping: 33, mass: 0.40 });
-  const t5x = useSpring(cursorX, { stiffness: 120, damping: 34, mass: 0.45 });
-  const t5y = useSpring(cursorY, { stiffness: 120, damping: 34, mass: 0.45 });
-  const t6x = useSpring(cursorX, { stiffness: 90, damping: 35, mass: 0.50 });
-  const t6y = useSpring(cursorY, { stiffness: 90, damping: 35, mass: 0.50 });
+  const t2x = useSpring(cursorX, { stiffness: 200, damping: 32, mass: 0.35 });
+  const t2y = useSpring(cursorY, { stiffness: 200, damping: 32, mass: 0.35 });
+  const t3x = useSpring(cursorX, { stiffness: 120, damping: 34, mass: 0.45 });
+  const t3y = useSpring(cursorY, { stiffness: 120, damping: 34, mass: 0.45 });
 
-  const trails = [
-    { x: t1x, y: t1y, size: 6, color: '#a78bfa', opacity: 0.30, blur: 0 },
-    { x: t2x, y: t2y, size: 5, color: '#38bdf8', opacity: 0.24, blur: 0.5 },
-    { x: t3x, y: t3y, size: 5, color: '#a78bfa', opacity: 0.18, blur: 1 },
-    { x: t4x, y: t4y, size: 4, color: '#f472b6', opacity: 0.14, blur: 1.5 },
-    { x: t5x, y: t5y, size: 3, color: '#38bdf8', opacity: 0.09, blur: 2 },
-    { x: t6x, y: t6y, size: 3, color: '#a78bfa', opacity: 0.06, blur: 2.5 },
+  const trails = reducedMotion ? [] : [
+    { x: t1x, y: t1y, size: 5, color: '#a78bfa', opacity: 0.28, blur: 0 },
+    { x: t2x, y: t2y, size: 4, color: '#38bdf8', opacity: 0.18, blur: 1 },
+    { x: t3x, y: t3y, size: 3, color: '#a78bfa', opacity: 0.10, blur: 2 },
   ];
 
   useEffect(() => {
+    setIsTouch(isTouchDevice());
+    setReducedMotion(prefersReducedMotion());
+  }, []);
+
+  useEffect(() => {
+    if (isTouch) return; // Don't attach listeners on touch devices
+
     const onMove = (e: MouseEvent) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
@@ -69,8 +79,8 @@ export const Cursor: React.FC = () => {
     const onLeave = () => setIsHidden(true);
     const onEnter = () => setIsHidden(false);
 
-    window.addEventListener('mousemove', onMove);
-    window.addEventListener('mouseover', onOver);
+    window.addEventListener('mousemove', onMove, { passive: true });
+    window.addEventListener('mouseover', onOver, { passive: true });
     window.addEventListener('mousedown', onDown);
     window.addEventListener('mouseup', onUp);
     document.documentElement.addEventListener('mouseleave', onLeave);
@@ -83,7 +93,10 @@ export const Cursor: React.FC = () => {
       document.documentElement.removeEventListener('mouseleave', onLeave);
       document.documentElement.removeEventListener('mouseenter', onEnter);
     };
-  }, [cursorX, cursorY]);
+  }, [cursorX, cursorY, isTouch]);
+
+  // Don't render custom cursor on touch devices — major perf win
+  if (isTouch) return null;
 
   return (
     <>

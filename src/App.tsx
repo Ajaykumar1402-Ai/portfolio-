@@ -181,7 +181,7 @@ function App() {
               </div>
 
               {/* Main Heading */}
-              <h1 className="font-extrabold leading-none font-syne whitespace-nowrap text-[clamp(2rem,5.5vw,4.8rem)] tracking-widest uppercase">
+              <h1 className="font-extrabold leading-none font-syne text-[clamp(2rem,5.5vw,4.8rem)] tracking-widest uppercase">
                 <span style={{
                   background: 'linear-gradient(135deg, #f1f0ff 0%, #a78bfa 60%, #38bdf8 100%)',
                   WebkitBackgroundClip: 'text',
@@ -244,7 +244,7 @@ function App() {
               </div>
 
               {/* Quick Stats */}
-              <div className="flex gap-8 pt-4 border-t border-border mt-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 pt-4 border-t border-border mt-2">
                 {[
                   { num: '8.69', label: 'CGPA' },
                   { num: '3+', label: 'Projects' },
@@ -347,7 +347,7 @@ function App() {
         <ContactSection />
 
         {/* ─── Footer ─── */}
-        <footer className="w-full py-8 border-t border-border glass flex flex-col md:flex-row items-center justify-between px-6 md:px-12 relative z-10 gap-4">
+        <footer className="w-full py-8 border-t border-border glass flex flex-col items-center justify-between px-6 md:px-12 relative z-10 gap-4 md:flex-row">
           <div className="flex items-center gap-3">
             <div className="w-6 h-6 rounded bg-gradient-to-br from-accent to-accent2 flex items-center justify-center">
               <span className="font-space text-background text-[7px] font-bold">AK</span>

@@ -24,9 +24,15 @@
     color: var(--text);
     font-family: 'Inter', 'Syne', sans-serif;
     overflow-x: hidden;
-    cursor: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Only hide native cursor on devices with a mouse/trackpad */
+  @media (hover: hover) and (pointer: fine) {
+    html, body {
+      cursor: none;
+    }
   }
 
   ::selection {

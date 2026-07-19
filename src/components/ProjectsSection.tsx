@@ -96,7 +96,9 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           animate={{ scale: hovered ? 1.15 : 1.08 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/50 to-background/20" />
+        {/* Strong dark overlay so text is always readable */}
+        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
         <div
           className="absolute inset-0 transition-opacity duration-700"
           style={{ background: `radial-gradient(ellipse at 80% 50%, ${project.accent}10 0%, transparent 70%)`, opacity: hovered ? 1 : 0 }}
@@ -104,10 +106,10 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       </div>
 
       {/* Content */}
-      <div className={`relative z-10 flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-10 p-7 md:p-12`}>
+      <div className={`relative z-10 flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-10 p-5 sm:p-7 md:p-12`}>
 
         {/* Image panel */}
-        <div style={{ transform: "translateZ(20px)" }} className="md:w-[45%] flex items-center justify-center">
+        <div style={{ transform: "translateZ(20px)" }} className="w-full md:w-[45%] flex items-center justify-center">
           <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/5 shadow-2xl relative group/img">
             <img
               src={project.image}
@@ -127,7 +129,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         </div>
 
         {/* Text panel */}
-        <div style={{ transform: "translateZ(40px)" }} className="md:w-[55%] flex flex-col justify-center gap-5">
+        <div style={{ transform: "translateZ(40px)" }} className="w-full md:w-[55%] flex flex-col justify-center gap-4 md:gap-5">
           {/* Tag line */}
           <div className="flex items-center gap-2">
             <div className="w-6 h-px" style={{ background: project.accent }} />
